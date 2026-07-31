@@ -3,8 +3,6 @@ import phonenumbers
 from better_str import Better_Str
 import nums
 from compress import com
-import readchar
-import time
 
 is_real = False
 numbers = Better_Str("")
@@ -27,9 +25,6 @@ def get_number():
 	number = phonenumbers.parse(random_num, "US")
 	if phonenumbers.is_valid_number(number):
 		numbers.append(random_num + "\n")
-	if readchar.readchar() == 's':
-		print('press ctrl + c now')
-		time.sleep(100)
 
 while not is_real:
 	try:
